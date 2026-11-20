@@ -18,7 +18,7 @@
 | Specification | Details |
 | :--- | :--- |
 | **App Name** | Codiology AppStore |
-| **Package Name** | `com.codiology.appstore` |
+| **Package Name** | `com.lagradost.cloudstream3` |
 | **Version Name** | `1.0.1` |
 | **Version Code** | `101` |
 | **Target Tag** | `v1.0.1` |
