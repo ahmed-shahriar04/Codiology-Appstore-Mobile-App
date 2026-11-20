@@ -1,7 +1,9 @@
-# 📱 Codiology AppStore - v1.0.1 Release Notes
+# 🚀 Codiology AppStore v1.0.2 - Performance, UI Polish & Feature Expansion Update
 
-![Version](https://img.shields.io/badge/Version-1.0.1-007AFF?style=for-the-badge&logo=android)
-![Build](https://img.shields.io/badge/Build-101-34C759?style=for-the-badge&logo=googleplay)
+# 📱 Codiology AppStore - v1.0.2 Release Notes
+
+![Version](https://img.shields.io/badge/Version-1.0.2-007AFF?style=for-the-badge&logo=android)
+![Build](https://img.shields.io/badge/Build-102-34C759?style=for-the-badge&logo=googleplay)
 ![Platform](https://img.shields.io/badge/Platform-Android%208.0%2B-0A84FF?style=for-the-badge&logo=android)
 ![Developer](https://img.shields.io/badge/Developer-Shahriar%20Ahmed%20Riaz-FF9500?style=for-the-badge)
 ![License](https://img.shields.io/badge/Copyright-%C2%A9%202026%20Codiology%20Labs-AF52DE?style=for-the-badge)
@@ -9,7 +11,7 @@
 ---
 
 ## 🌟 Overview
-**Codiology AppStore v1.0.1** brings a major performance overhaul, interactive step-by-step onboarding, a dedicated **Downloads & Updates Manager**, native system notifications with sound, uncropped dynamic screenshots, persistent dark mode caching, and an improved multi-tier package visibility engine!
+**Codiology AppStore v1.0.2** introduces a massive overhaul with instant local catalog caching (0s load latency), advanced download pause/resume controls with speed metrics, an interactive App Categories browser, search history with trending chips, a dedicated Notification History Center, and Codiology Protect security verification!
 
 ---
 
@@ -18,60 +20,58 @@
 | Specification | Details |
 | :--- | :--- |
 | **App Name** | Codiology AppStore |
-| **Package Name** | `com.lagradost.cloudstream3` |
-| **Version Name** | `1.0.1` |
-| **Version Code** | `101` |
-| **Target Tag** | `v1.0.1` |
-| **APK Size** | `~12.8 MB` |
+| **Package Name** | `com.codiology.appstore` |
+| **Version Name** | `1.0.2` |
+| **Version Code** | `1` |
+| **Target Tag** | `v1.0.2` |
+| **APK Size** | `~13.2 MB` |
 | **Min Compatibility** | Android 8.0 (Oreo) or higher (`API 26+`) |
 | **Language Support** | English (Global) |
-| **Age Rating** | 3+ (Everyone) |
 | **Lead Developer** | **Shahriar Ahmed Riaz** |
 | **Copyright** | © 2026 Codiology Labs. All rights reserved. |
 
 ---
 
-## ✨ What's New in v1.0.1 (Change Log)
+## ✨ What's New in v1.0.2 (Change Log)
 
-### 🚀 Performance Optimizations & Zero-ANR Engine
-- ⚡ **ANR & UI Freeze Elimination**: Removed blocking package manager loop calls from the UI thread. App details and tab switching now open **instantly (1-2ms)**.
-- 🖼️ **PostImg & GitHub Fast CDN Sanitizer**: Automatically transforms PostImg webpage URLs (`postimg.cc/...`) into direct fast image streams (`i.postimg.cc/...`).
-- 🏎️ **Glide High-Priority Memory Caching**: Optimized image preloading with `DiskCacheStrategy.ALL`, `Priority.HIGH`, and `.dontAnimate()` for instant screenshot rendering.
+### 📁 Dynamic App Categories
+- **Dynamic Category Browser**: Added `CategoriesActivity` and `CategoriesFragment` that dynamically parse and render categories directly from the Firestore database.
+- **Theme-Aware Chips**: Redesigned iOS-style category chips supporting dynamic light and dark theme switching.
 
-### ⬇️ Dedicated Downloads & Updates Manager
-- 📲 **New Downloads & Updates Page**: Track all available app updates in one dedicated interface (`UpdateAppsActivity`).
-- ⚡ **"Update All" Batch Process**: Download and install pending app updates sequentially with a single tap.
-- 🔔 **System Notifications with Sound**: Triggers native status-bar update alerts with sound (`RingtoneManager.TYPE_NOTIFICATION`) whenever store updates are available.
+### ⏸️ Advanced Download Manager & Speed Metrics
+- **Pause & Resume Downloads**: Supports instant pause and resume toggle during APK downloads using HTTP Range stream handling.
+- **Real-Time Download Speed**: Displays live transfer rates (e.g. `2.5 MB/s`, `850 KB/s`) directly on progress action buttons.
+- **Status Bar Progress & Branding**: Real-time status bar download progress with the clean, non-background App Store logo icon (`R.drawable.appstore`).
 
-### 🎨 Onboarding & UI Enhancements
-- 👋 **Interactive 3-Page Onboarding Slider**: Clean welcome flow featuring high-resolution transparent app branding (`appstore.png`).
-- 🔒 **Non-Blocking Permission Flow**: Optional, step-by-step permission setup (`Grant Install Permission` ➔ `Granted • Continue` ➔ `Get Started`).
-- 📐 **Flexible Preview Screenshots**: 100% uncropped aspect ratio rendering with 15px rounded corners, seamlessly supporting both **Portrait (9:16)** and **Landscape (16:9)** screenshots.
-- 🎯 **Firestore Banner Screen Filtering**: Banners now dynamically render based on admin placement flags (`showOnHome`, `showOnApps`, `showOnGames`).
+### ⚡ Instant Local Caching & Zero-Lag Navigation
+- **Local Catalog Cache (`CookieSessionManager`)**: Instantaneous (0s) app startup and tab switching by persisting the catalog to local disk.
+- **Full-Screen 8-Item Shimmer Skeleton**: Enhanced loading placeholders with left-to-right sweep animations across Home, Apps, Games, Search, and Categories tabs.
 
-### 🌗 Dark Mode & System Enhancements
-- 🌙 **Persistent Dark Mode Engine**: Dark mode preferences are saved to disk (`SharedPreferences`) and applied during process startup via `AppStoreApplication`.
-- 🔁 **Recreation Bugfix**: Resolved fragment state loss and bottom navigation unresponsiveness upon theme switching.
-- 🔙 **Smart Back Button Handling**: Pressing the back button returns to the Home tab before prompting a custom exit warning dialog (`dialog_warning.xml`).
-- 🏷️ **Dynamic Version Display**: Dynamically reads `versionName` (`1.0.1`) from `build.gradle` across Splash and About screens.
-- 📤 **Native Share Sheet**: Integrated system share sheet featuring app invite text and download URL (`https://codiologyappstore.netlify.app/app/codiology-appstore`).
+### 🛡️ Codiology Protect & Safety Enhancements
+- **Verified Safe Badge**: Integrated **"Codiology Protect • Verified Safe"** security card on the app detail page.
+- **Battery & Thermal Protection**: Throttled notification updates (1000ms intervals) and 16 KB buffer sizing to prevent CPU overheating and battery drain.
+- **Robust Uninstallation (`REQUEST_DELETE_PACKAGES`)**: Smooth native uninstallation dialog with 3-tier fallback resolution.
+
+### 🔍 Search & Notification History
+- **Search History & Trending Chips**: Save recent search queries with one-tap clear options alongside interactive trending search chips.
+- **Notification History Center**: Added `NotificationHistoryActivity` accessible from Settings with clear-all capabilities and zero dummy entries.
 
 ---
 
 ## 📥 Download APK
 
-Directly download the compiled release APK for **Codiology AppStore v1.0.1**:
+Directly download the compiled release APK for **Codiology AppStore v1.0.2**:
 
-- 📦 **[Download Codiology-AppStore-v1.0.1.apk](https://github.com/ahmed-shahriar04/AppStore/releases/download/v1.0.1/AppStore-v1.0.1.apk)** *(Size: ~13 MB)*
+- 📦 **[Download Codiology-AppStore-v1.0.2.apk](https://github.com/ahmed-shahriar04/AppStore/releases/download/v1.0.2/AppStore-v1.0.2.apk)** *(Size: ~13.2 MB)*
 
 ---
 
 ## 🔒 Permissions Requested
 
 - 🌐 `INTERNET` & `ACCESS_NETWORK_STATE`: Real-time catalog syncing with Firebase Firestore.
-- 📦 `REQUEST_INSTALL_PACKAGES`: Direct in-app APK installation and app updates.
-- 🔔 `POST_NOTIFICATIONS`: System notifications with sound for pending app updates.
-- 🔍 `QUERY_ALL_PACKAGES`: Multi-tier package detection to determine `OPEN` / `UPDATE` status.
+- 📦 `REQUEST_INSTALL_PACKAGES` & `REQUEST_DELETE_PACKAGES`: Direct in-app APK installation, updates, and package uninstallation.
+- 🔔 `POST_NOTIFICATIONS`: Real-time status bar notifications for updates and download progress.
+- 🔍 `QUERY_ALL_PACKAGES`: 4-tier package detection to determine `OPEN` / `UPDATE` status.
 
 ---
 
