@@ -1,9 +1,9 @@
-# 🚀 Codiology AppStore v1.0.2 - Performance, UI Polish & Feature Expansion Update
+# 🚀 Codiology AppStore v1.0.3 - Performance, UI Polish & Feature Expansion Update
 
-# 📱 Codiology AppStore - v1.0.2 Release Notes
+# 📱 Codiology AppStore - v1.0.3 Release Notes
 
-![Version](https://img.shields.io/badge/Version-1.0.2-007AFF?style=for-the-badge&logo=android)
-![Build](https://img.shields.io/badge/Build-102-34C759?style=for-the-badge&logo=googleplay)
+![Version](https://img.shields.io/badge/Version-1.0.3-007AFF?style=for-the-badge&logo=android)
+![Build](https://img.shields.io/badge/Build-103-34C759?style=for-the-badge&logo=googleplay)
 ![Platform](https://img.shields.io/badge/Platform-Android%208.0%2B-0A84FF?style=for-the-badge&logo=android)
 ![Developer](https://img.shields.io/badge/Developer-Shahriar%20Ahmed%20Riaz-FF9500?style=for-the-badge)
 ![License](https://img.shields.io/badge/Copyright-%C2%A9%202026%20Codiology%20Labs-AF52DE?style=for-the-badge)
@@ -11,7 +11,7 @@
 ---
 
 ## 🌟 Overview
-**Codiology AppStore v1.0.2** introduces a massive overhaul with instant local catalog caching (0s load latency), advanced download pause/resume controls with speed metrics, an interactive App Categories browser, search history with trending chips, a dedicated Notification History Center, and Codiology Protect security verification!
+**Codiology AppStore v1.0.3** introduces a massive overhaul with instant local catalog caching (0s load latency), advanced download pause/resume controls with speed metrics, an interactive App Categories browser, search history with trending chips, a dedicated Notification History Center, and Codiology Protect security verification!
 
 ---
 
@@ -21,10 +21,10 @@
 | :--- | :--- |
 | **App Name** | Codiology AppStore |
 | **Package Name** | `com.codiology.appstore` |
-| **Version Name** | `1.0.2` |
-| **Version Code** | `1` |
-| **Target Tag** | `v1.0.2` |
-| **APK Size** | `~13.2 MB` |
+| **Version Name** | `1.0.3` |
+| **Version Code** | `103` |
+| **Target Tag** | `v1.0.3` |
+| **APK Size** | `~13.44 MB` |
 | **Min Compatibility** | Android 8.0 (Oreo) or higher (`API 26+`) |
 | **Language Support** | English (Global) |
 | **Lead Developer** | **Shahriar Ahmed Riaz** |
@@ -60,9 +60,9 @@
 
 ## 📥 Download APK
 
-Directly download the compiled release APK for **Codiology AppStore v1.0.2**:
+Directly download the compiled release APK for **Codiology AppStore v1.0.3**:
 
-- 📦 **[Download Codiology-AppStore-v1.0.2.apk](https://github.com/ahmed-shahriar04/AppStore/releases/download/v1.0.2/AppStore-v1.0.2.apk)** *(Size: ~13.2 MB)*
+- 📦 **[Download Codiology-AppStore-v1.0.3.apk](https://github.com/ahmed-shahriar04/AppStore/releases/download/v1.0.3/AppStore-v1.0.3.apk)** *(Size: ~13.44 MB)*
 
 ---
 
